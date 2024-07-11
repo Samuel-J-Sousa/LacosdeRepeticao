@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MédiaPoderada</title>
+</head>
+<body>
+  <h1>Média Poderada e Média de Turma</h1>
+  <button type="button" onclick="media()">Calcule as médias dos alunos: </button>
+  
+  <script>
+    function media(){
+const turma = 20; 
+const notas = 3;  
+var mediaalunos = 0; 
+
+for (var aluno = 1; aluno <= turma; aluno++) {
+
+    var nota1 = (prompt(`Digite a nota 1 do aluno ${aluno}:`));
+    var nota2 = (prompt(`Digite a nota 2 do aluno ${aluno}:`));
+    var nota3 = (prompt(`Digite a nota 3 do aluno ${aluno}:`));
+
+    var mediaPonderada = (nota1 * 2 + nota2 * 4 + nota3 * 3) /10;
+
+
+    document.write(`<p>Média ponderada do aluno ${aluno}:</p> ${mediaPonderada.toFixed(2)}`);
+
+    mediaalunos += mediaPonderada;
+}
+
+var mediaTurma = mediaalunos / turma;
+
+document.write(`<br>Média da turma: ${mediaTurma.toFixed(2)}</br>`);
+}
+  </script>
+</body>
+</html>
